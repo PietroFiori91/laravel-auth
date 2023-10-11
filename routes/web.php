@@ -29,4 +29,7 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('admin/projects', ProjectController::class);
 });
 
+Route::post('/admin/projects', 'Admin\ProjectController@store')->name('admin.projects.store');
+
+
 require __DIR__ . '/auth.php';
